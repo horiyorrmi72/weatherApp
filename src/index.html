@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Weather PWA">
+<link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+<meta name="description" content="A sample weather app">
+<meta name="theme-color" content="#2F3BA2" />
+    <title>smashIt weather app</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> smash it accurate weather report</h1>
+        <img src="" alt="weather_logo" id="weather_logo">
+    </header>
+    <input type="number" id="lon" placeholder="longitude" required><br>
+    <input type="number" id="lat" placeholder="latitude" required><br>
+    <button id="weatherBtn">search</button>
+    
+   <ul>
+    <div>
+      <li>Timezone:<span id="timezone"></span></li>
+    </div>
+        <div class="temp">
+           <li>Temperature:<span id="temp"> </span> </li>
+
+</div>
+    <!--<li>High Temperature:<span id="temp_high"></span></li>
+    <li>Low Temperature:<span id="temp_min"></span></li>-->
+    <div>
+          <li>Humidity:<span id="humidity"></span></li>
+        </div>
+      <div>
+    <li>Pressure:<span id="pressure"></span></li>
+    
+    </div>
+    <div>
+          <li>FeelsLike:<span id="feelLike"></span></li>
+          
+      </div>
+    </ul>
+    <section id="fmessage">
+     <p>please be informed once the weather report <span>Temperature</span> is higher than <span>29</span> the program wont be holding</p>
+     <p>we aim to do better than this on our app</p>
+    </section>
+    <script>
+        if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/index.sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+    </script>
+
+   
+    <script src="weather.js"></script>
+    </body>
+</html>

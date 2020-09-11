@@ -1,0 +1,50 @@
+header{
+    position: relative;
+    background: linear-gradient(yellow,pink);
+    text-align: center;
+    text-transform:capitalize;
+    
+}
+.weather_icons{
+    width: 10%;
+    height: 2%;
+}
+#weatherBtn{
+    background-color: greenyellow;
+    
+}
+body{
+    background-image: url(/images/Weather\ logo\ samples.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    opacity: 1;
+    width: 95%;
+    margin: auto;
+    padding:10px;
+    text-align: center;
+
+}
+[type=number]{
+    width: 45%;
+    text-align: center;
+    margin-top: 45px;
+  
+}
+li{
+    list-style-type: none;
+    margin: 20px;
+}
+@media (max-width:800px) {
+    body{
+        font-size: 20px;
+text-align: center;
+    }
+    li{
+        list-style-type: none;
+    }
+    [type=number]{
+        margin: 10px;
+        height: 30px;
+
+    }
+  }
